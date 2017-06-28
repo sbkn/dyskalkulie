@@ -20,6 +20,9 @@
 		BC1A3E931F041771008906A2 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3E921F041771008906A2 /* ExtensionDelegate.swift */; };
 		BC1A3E951F041771008906A2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3E941F041771008906A2 /* NotificationController.swift */; };
 		BC1A3E971F041771008906A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1A3E961F041771008906A2 /* Assets.xcassets */; };
+		BC1A3EA71F041879008906A2 /* HoleOneInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EA61F041879008906A2 /* HoleOneInterfaceController.swift */; };
+		BC1A3EA91F0419BC008906A2 /* HoleTwoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EA81F0419BC008906A2 /* HoleTwoInterfaceController.swift */; };
+		BC1A3EAB1F041E11008906A2 /* HoleThreeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EAA1F041E11008906A2 /* HoleThreeInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		BC1A3E941F041771008906A2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		BC1A3E961F041771008906A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC1A3E981F041771008906A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1A3EA61F041879008906A2 /* HoleOneInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleOneInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EA81F0419BC008906A2 /* HoleTwoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleTwoInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EAA1F041E11008906A2 /* HoleThreeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleThreeInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,9 @@
 			isa = PBXGroup;
 			children = (
 				BC1A3E901F041771008906A2 /* InterfaceController.swift */,
+				BC1A3EA61F041879008906A2 /* HoleOneInterfaceController.swift */,
+				BC1A3EA81F0419BC008906A2 /* HoleTwoInterfaceController.swift */,
+				BC1A3EAA1F041E11008906A2 /* HoleThreeInterfaceController.swift */,
 				BC1A3E921F041771008906A2 /* ExtensionDelegate.swift */,
 				BC1A3E941F041771008906A2 /* NotificationController.swift */,
 				BC1A3E961F041771008906A2 /* Assets.xcassets */,
@@ -314,9 +323,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A3EAB1F041E11008906A2 /* HoleThreeInterfaceController.swift in Sources */,
+				BC1A3EA71F041879008906A2 /* HoleOneInterfaceController.swift in Sources */,
 				BC1A3E951F041771008906A2 /* NotificationController.swift in Sources */,
 				BC1A3E931F041771008906A2 /* ExtensionDelegate.swift in Sources */,
 				BC1A3E911F041771008906A2 /* InterfaceController.swift in Sources */,
+				BC1A3EA91F0419BC008906A2 /* HoleTwoInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

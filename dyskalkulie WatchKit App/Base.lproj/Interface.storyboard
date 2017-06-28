@@ -1,16 +1,210 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="dyskalkulie_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Dyskalkulie" id="2PD-0p-UaF"/>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Start" id="ejf-sK-EcL">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="VKK-xn-SNf" kind="modal" id="cVa-El-wr6"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <segue destination="VKK-xn-SNf" kind="relationship" relationship="nextPage" id="F4t-4b-ynx"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
+        </scene>
+        <!--Hole 1-->
+        <scene sceneID="hbt-am-pVJ">
+            <objects>
+                <controller title="Hole 1" id="VKK-xn-SNf" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="4Pe-9b-UWN">
+                            <items>
+                                <button width="60" alignment="left" title="+" id="mcp-c3-fd9">
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="incrPlayerOneCnt" destination="VKK-xn-SNf" id="Toe-nR-07t"/>
+                                    </connections>
+                                </button>
+                                <button width="60" alignment="right" title="+" id="Zar-QQ-oBx">
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="incrPlayerTwoCnt" destination="VKK-xn-SNf" id="LN1-uv-YOJ"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Zpl-OQ-shQ">
+                            <items>
+                                <label width="60" alignment="left" text="0" textAlignment="center" id="dpa-iM-mYD"/>
+                                <label width="60" alignment="right" text="0" textAlignment="center" id="dbe-gg-G3r"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="sES-pw-BP9">
+                            <items>
+                                <button width="60" height="30" alignment="left" title="-" id="7Y4-6L-ZyH">
+                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="decrPlayerOneCnt" destination="VKK-xn-SNf" id="yWE-gE-hqq"/>
+                                    </connections>
+                                </button>
+                                <button width="60" height="30" alignment="right" title="-" id="zEK-wy-vMs">
+                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="decrPlayerTwoCnt" destination="VKK-xn-SNf" id="fpQ-su-C4p"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="4o6-Nz-any">
+                            <items>
+                                <label width="60" alignment="left" text="P1" textAlignment="center" id="537-w4-Aey"/>
+                                <label width="60" alignment="right" text="P2" textAlignment="center" id="wst-r7-6Mr"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelPOneCnt" destination="dpa-iM-mYD" id="bLK-Ul-bm6"/>
+                        <outlet property="labelPTwoCnt" destination="dbe-gg-G3r" id="vFx-Hc-pEV"/>
+                        <segue destination="x3F-7q-r3V" kind="relationship" relationship="nextPage" id="hHP-DF-Rab"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="468" y="345"/>
+        </scene>
+        <!--Hole 2-->
+        <scene sceneID="lX1-3V-Fxw">
+            <objects>
+                <controller title="Hole 2" id="x3F-7q-r3V" customClass="HoleTwoInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="oGL-Nq-T0X">
+                            <items>
+                                <button width="60" alignment="left" title="+" id="nLG-Ua-Gby">
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="incrPlayerOneCnt" destination="VKK-xn-SNf" id="Kew-5T-fGh"/>
+                                    </connections>
+                                </button>
+                                <button width="60" alignment="right" title="+" id="Qtv-Bx-f6C">
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="incrPlayerTwoCnt" destination="VKK-xn-SNf" id="rLc-xB-2T8"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Xmv-re-PBY">
+                            <items>
+                                <label width="60" alignment="left" text="0" textAlignment="center" id="Rv8-f1-kXE"/>
+                                <label width="60" alignment="right" text="0" textAlignment="center" id="1cM-jw-40u"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Nas-nu-Pab">
+                            <items>
+                                <button width="60" height="30" alignment="left" title="-" id="p1i-Gl-Q2f">
+                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="decrPlayerOneCnt" destination="VKK-xn-SNf" id="Ofg-5c-Ttn"/>
+                                    </connections>
+                                </button>
+                                <button width="60" height="30" alignment="right" title="-" id="NrE-UE-zNo">
+                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="decrPlayerTwoCnt" destination="VKK-xn-SNf" id="YaK-Ib-hBK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="4kr-31-xs3">
+                            <items>
+                                <label width="60" alignment="left" text="P1" textAlignment="center" id="YfK-pk-jaq"/>
+                                <label width="60" alignment="right" text="P2" textAlignment="center" id="gAL-B8-nJs"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelPOneCnt" destination="Rv8-f1-kXE" id="mkx-H9-7Fg"/>
+                        <outlet property="labelPTwoCnt" destination="1cM-jw-40u" id="Gci-LI-cQa"/>
+                        <segue destination="N80-U0-gJz" kind="relationship" relationship="nextPage" id="gNq-bb-xff"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="687" y="345"/>
+        </scene>
+        <!--Hole 3-->
+        <scene sceneID="MUZ-41-HXu">
+            <objects>
+                <controller title="Hole 3" id="N80-U0-gJz" customClass="HoleThreeInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="IH4-yV-oba">
+                            <items>
+                                <button width="60" alignment="left" title="+" id="Fhe-OT-KDY">
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="incrPlayerOneCnt" destination="VKK-xn-SNf" id="wRu-TW-5ak"/>
+                                    </connections>
+                                </button>
+                                <button width="60" alignment="right" title="+" id="xsf-hM-Zfh">
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="incrPlayerTwoCnt" destination="VKK-xn-SNf" id="YF0-IU-Aer"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Rzy-we-Zrj">
+                            <items>
+                                <label width="60" alignment="left" text="0" textAlignment="center" id="jCc-r3-3N4"/>
+                                <label width="60" alignment="right" text="0" textAlignment="center" id="xah-zy-YQi"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="qS0-ba-Dk4">
+                            <items>
+                                <button width="60" height="30" alignment="left" title="-" id="8NY-9s-BZU">
+                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="decrPlayerOneCnt" destination="VKK-xn-SNf" id="zgR-4c-Y8F"/>
+                                    </connections>
+                                </button>
+                                <button width="60" height="30" alignment="right" title="-" id="uCa-7b-0Zh">
+                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="decrPlayerTwoCnt" destination="VKK-xn-SNf" id="Lpj-gz-dh0"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="Cgf-Ii-CPK">
+                            <items>
+                                <label width="60" alignment="left" text="P1" textAlignment="center" id="8St-K9-oDg"/>
+                                <label width="60" alignment="right" text="P2" textAlignment="center" id="Uzc-DI-kkm"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="labelPOneCnt" destination="jCc-r3-3N4" id="xSU-eT-UBN"/>
+                        <outlet property="labelPTwoCnt" destination="xah-zy-YQi" id="0t0-Ge-H0F"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="915" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -31,9 +225,12 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="dyskalkulie_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cVa-El-wr6"/>
+    </inferredMetricsTieBreakers>
 </document>
