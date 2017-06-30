@@ -15,14 +15,18 @@ class HoleOneInterfaceController: WKInterfaceController {
     @IBOutlet var labelPOneCnt: WKInterfaceLabel!
     @IBOutlet var labelPTwoCnt: WKInterfaceLabel!
     
-    var pOnecounter : Int!
-    var pTwocounter : Int!
+    @IBOutlet var incrPlayerOneBtn: WKInterfaceButton!
+    @IBOutlet var decrPlayerOneBtn: WKInterfaceButton!
+    @IBOutlet var incrPlayerTwoBtn: WKInterfaceButton!
+    @IBOutlet var decrPlayerTwoBtn: WKInterfaceButton!
+    
+    let holeIndex : Int = 0
+    var buttonsAreLocked : Bool = false
+    
+    let model = CounterModel()
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        pOnecounter = 0
-        pTwocounter = 0
     }
     
     override func willActivate() {
@@ -35,28 +39,49 @@ class HoleOneInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    @IBAction func lockButtons(_ sender: WKLongPressGestureRecognizer) {
+        if sender.state == WKGestureRecognizerState.ended {
+            buttonsAreLocked = !buttonsAreLocked
+            incrPlayerOneBtn.setEnabled(!buttonsAreLocked)
+            decrPlayerOneBtn.setEnabled(!buttonsAreLocked)
+            incrPlayerTwoBtn.setEnabled(!buttonsAreLocked)
+            decrPlayerTwoBtn.setEnabled(!buttonsAreLocked)
+        }
+    }
+    
     @IBAction func incrPlayerOneCnt() {
-        pOnecounter = pOnecounter + 1
-        labelPOneCnt.setText(pOnecounter.description)
+        if buttonsAreLocked {
+            return
+        }
+        model.incrementStrokesPlayerOne(hole: holeIndex)
+        labelPOneCnt.setText(model.getStrokesPlayerOne(hole: holeIndex).description)
         WKInterfaceDevice.current().play(.click)
-        
     }
     
     @IBAction func decrPlayerOneCnt() {
-        pOnecounter = pOnecounter > 0 ? pOnecounter - 1 : pOnecounter
-        labelPOneCnt.setText(pOnecounter.description)
+        if buttonsAreLocked {
+            return
+        }
+        model.decrementStrokesPlayerOne(hole: holeIndex)
+        labelPOneCnt.setText(model.getStrokesPlayerOne(hole: holeIndex).description)
         WKInterfaceDevice.current().play(.click)
     }
     
     @IBAction func incrPlayerTwoCnt() {
-        pTwocounter = pTwocounter + 1
-        labelPTwoCnt.setText(pTwocounter.description)
+        if buttonsAreLocked {
+            return
+        }
+        model.incrementStrokesPlayerTwo(hole: holeIndex)
+        labelPTwoCnt.setText(model.getStrokesPlayerTwo(hole: holeIndex).description)
         WKInterfaceDevice.current().play(.click)
     }
     
     @IBAction func decrPlayerTwoCnt() {
-        pTwocounter = pTwocounter > 0 ? pTwocounter - 1 : pTwocounter
-        labelPTwoCnt.setText(pTwocounter.description)
+        if buttonsAreLocked {
+            return
+        }
+        model.decrementStrokesPlayerTwo(hole: holeIndex)
+        labelPTwoCnt.setText(model.getStrokesPlayerTwo(hole: holeIndex).description)
         WKInterfaceDevice.current().play(.click)
     }
 }

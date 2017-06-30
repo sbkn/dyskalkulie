@@ -10,7 +10,7 @@ import WatchKit
 import Foundation
 
 
-class HoleThreeInterfaceController: WKInterfaceController {
+class HoleFourInterfaceController: WKInterfaceController {
     
     @IBOutlet var labelPOneCnt: WKInterfaceLabel!
     @IBOutlet var labelPTwoCnt: WKInterfaceLabel!
@@ -20,7 +20,7 @@ class HoleThreeInterfaceController: WKInterfaceController {
     @IBOutlet var incrPlayerTwoBtn: WKInterfaceButton!
     @IBOutlet var decrPlayerTwoBtn: WKInterfaceButton!
     
-    let holeIndex : Int = 2
+    let holeIndex : Int = 3
     var buttonsAreLocked : Bool = false
     
     let model = CounterModel()
