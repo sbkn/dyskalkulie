@@ -23,9 +23,9 @@
 		BC1A3EA71F041879008906A2 /* HoleOneInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EA61F041879008906A2 /* HoleOneInterfaceController.swift */; };
 		BC1A3EA91F0419BC008906A2 /* HoleTwoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EA81F0419BC008906A2 /* HoleTwoInterfaceController.swift */; };
 		BC1A3EB11F06DFF9008906A2 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EB01F06DFF9008906A2 /* CounterModel.swift */; };
-		BC1A3EB31F06E7B7008906A2 /* HoleThreeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EB21F06E7B7008906A2 /* HoleThreeInterfaceController.swift */; };
-		BC1A3EB51F06E939008906A2 /* HoleFourInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EB41F06E939008906A2 /* HoleFourInterfaceController.swift */; };
-		BC1A3EB71F06EAA7008906A2 /* HoleFiveInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EB61F06EAA7008906A2 /* HoleFiveInterfaceController.swift */; };
+		BC1A3EBA1F07BB86008906A2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A3EB91F07BB86008906A2 /* WatchConnectivity.framework */; };
+		BC1A3EBC1F07BB99008906A2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A3EBB1F07BB99008906A2 /* WatchConnectivity.framework */; };
+		BC1A3EBE1F080D7E008906A2 /* ConnectivityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,9 +92,9 @@
 		BC1A3EA61F041879008906A2 /* HoleOneInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleOneInterfaceController.swift; sourceTree = "<group>"; };
 		BC1A3EA81F0419BC008906A2 /* HoleTwoInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleTwoInterfaceController.swift; sourceTree = "<group>"; };
 		BC1A3EB01F06DFF9008906A2 /* CounterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
-		BC1A3EB21F06E7B7008906A2 /* HoleThreeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleThreeInterfaceController.swift; sourceTree = "<group>"; };
-		BC1A3EB41F06E939008906A2 /* HoleFourInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleFourInterfaceController.swift; sourceTree = "<group>"; };
-		BC1A3EB61F06EAA7008906A2 /* HoleFiveInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleFiveInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EB91F07BB86008906A2 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
+		BC1A3EBB1F07BB99008906A2 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A3EBC1F07BB99008906A2 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A3EBA1F07BB86008906A2 /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +124,7 @@
 				BC1A3E7E1F041771008906A2 /* dyskalkulie WatchKit App */,
 				BC1A3E8D1F041771008906A2 /* dyskalkulie WatchKit Extension */,
 				BC1A3E691F041771008906A2 /* Products */,
+				BC1A3EB81F07BB86008906A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +147,7 @@
 				BC1A3E721F041771008906A2 /* Assets.xcassets */,
 				BC1A3E741F041771008906A2 /* LaunchScreen.storyboard */,
 				BC1A3E771F041771008906A2 /* Info.plist */,
+				BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */,
 			);
 			path = dyskalkulie;
 			sourceTree = "<group>";
@@ -165,9 +169,6 @@
 				BC1A3E901F041771008906A2 /* InterfaceController.swift */,
 				BC1A3EA61F041879008906A2 /* HoleOneInterfaceController.swift */,
 				BC1A3EA81F0419BC008906A2 /* HoleTwoInterfaceController.swift */,
-				BC1A3EB21F06E7B7008906A2 /* HoleThreeInterfaceController.swift */,
-				BC1A3EB41F06E939008906A2 /* HoleFourInterfaceController.swift */,
-				BC1A3EB61F06EAA7008906A2 /* HoleFiveInterfaceController.swift */,
 				BC1A3E921F041771008906A2 /* ExtensionDelegate.swift */,
 				BC1A3E941F041771008906A2 /* NotificationController.swift */,
 				BC1A3E961F041771008906A2 /* Assets.xcassets */,
@@ -183,6 +184,15 @@
 				BC1A3E8F1F041771008906A2 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC1A3EB81F07BB86008906A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC1A3EBB1F07BB99008906A2 /* WatchConnectivity.framework */,
+				BC1A3EB91F07BB86008906A2 /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC1A3E6E1F041771008906A2 /* ViewController.swift in Sources */,
+				BC1A3EBE1F080D7E008906A2 /* ConnectivityHandler.swift in Sources */,
 				BC1A3E6C1F041771008906A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,15 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC1A3EB71F06EAA7008906A2 /* HoleFiveInterfaceController.swift in Sources */,
 				BC1A3EA71F041879008906A2 /* HoleOneInterfaceController.swift in Sources */,
 				BC1A3E951F041771008906A2 /* NotificationController.swift in Sources */,
 				BC1A3EB11F06DFF9008906A2 /* CounterModel.swift in Sources */,
 				BC1A3E931F041771008906A2 /* ExtensionDelegate.swift in Sources */,
-				BC1A3EB31F06E7B7008906A2 /* HoleThreeInterfaceController.swift in Sources */,
 				BC1A3E911F041771008906A2 /* InterfaceController.swift in Sources */,
 				BC1A3EA91F0419BC008906A2 /* HoleTwoInterfaceController.swift in Sources */,
-				BC1A3EB51F06E939008906A2 /* HoleFourInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

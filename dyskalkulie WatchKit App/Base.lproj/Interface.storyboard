@@ -9,22 +9,32 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--main-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="dyskalkulie_WatchKit_App" customModuleProvider="target">
+                <controller identifier="main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="dyskalkulie_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="Dyskalkulie" id="2PD-0p-UaF"/>
                         <button width="1" alignment="center" verticalAlignment="center" title="Start" id="ejf-sK-EcL">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="VKK-xn-SNf" kind="modal" id="cVa-El-wr6"/>
+                                <segue destination="VKK-xn-SNf" kind="modal" id="3CB-lh-UpA"/>
                             </connections>
                         </button>
-                        <button width="1" alignment="center" verticalAlignment="bottom" title="Reset" id="3Oq-gN-cfd">
+                        <button width="1" alignment="center" verticalAlignment="center" title="Save" id="F04-fK-k6X">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="saveData" destination="AgC-eL-Hgc" id="nPX-re-OEU"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" verticalAlignment="center" title="Reset" id="3Oq-gN-cfd">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="resetRound" destination="AgC-eL-Hgc" id="nI1-Rt-5dM"/>
+                            </connections>
                         </button>
                     </items>
                 </controller>
@@ -173,232 +183,10 @@
                         <outlet property="incrPlayerTwoBtn" destination="Qtv-Bx-f6C" id="Pk5-PR-k0v"/>
                         <outlet property="labelPOneCnt" destination="Rv8-f1-kXE" id="mkx-H9-7Fg"/>
                         <outlet property="labelPTwoCnt" destination="1cM-jw-40u" id="Gci-LI-cQa"/>
-                        <segue destination="XHv-Z9-3XD" kind="relationship" relationship="nextPage" id="7E8-xV-Q6B"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="695" y="345"/>
-        </scene>
-        <!--Hole 3-->
-        <scene sceneID="5We-7v-ZZq">
-            <objects>
-                <controller identifier="2" title="Hole 3" id="XHv-Z9-3XD" customClass="HoleThreeInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="Wx8-uB-1fw">
-                            <items>
-                                <button width="60" alignment="left" title="+" id="nJM-J2-a7D">
-                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="incrPlayerOneCnt" destination="XHv-Z9-3XD" id="NEX-wh-ddQ"/>
-                                    </connections>
-                                </button>
-                                <button width="60" alignment="right" title="+" id="giI-v3-xG9">
-                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="incrPlayerTwoCnt" destination="XHv-Z9-3XD" id="fed-cO-OvM"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="H0T-0C-jLr">
-                            <items>
-                                <label width="60" alignment="left" text="0" textAlignment="center" id="oGB-fb-fee">
-                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
-                                </label>
-                                <label width="60" alignment="right" text="0" textAlignment="center" id="h14-eC-AA1">
-                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
-                                </label>
-                            </items>
-                            <gestureRecognizers>
-                                <longPressGestureRecognizer id="GVG-mG-TBB">
-                                    <connections>
-                                        <action selector="lockButtons:" destination="XHv-Z9-3XD" id="GIb-PA-S0l"/>
-                                    </connections>
-                                </longPressGestureRecognizer>
-                            </gestureRecognizers>
-                        </group>
-                        <group width="1" alignment="left" id="bHn-tI-noh">
-                            <items>
-                                <button width="60" height="30" alignment="left" title="-" id="dK8-4A-QrJ">
-                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="decrPlayerOneCnt" destination="XHv-Z9-3XD" id="mFU-L4-dgu"/>
-                                    </connections>
-                                </button>
-                                <button width="60" height="30" alignment="right" title="-" id="lH0-gH-BPH">
-                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="decrPlayerTwoCnt" destination="XHv-Z9-3XD" id="qj7-x1-oNK"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="jnh-2h-4zV">
-                            <items>
-                                <label width="60" alignment="left" text="P1" textAlignment="center" id="mWV-IC-Avk"/>
-                                <label width="60" alignment="right" text="P2" textAlignment="center" id="77H-nK-Hqc"/>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="decrPlayerOneBtn" destination="dK8-4A-QrJ" id="0wE-fv-ZuK"/>
-                        <outlet property="decrPlayerTwoBtn" destination="lH0-gH-BPH" id="dum-aP-AUX"/>
-                        <outlet property="incrPlayerOneBtn" destination="nJM-J2-a7D" id="RtD-jX-XJb"/>
-                        <outlet property="incrPlayerTwoBtn" destination="giI-v3-xG9" id="qBZ-Od-F1r"/>
-                        <outlet property="labelPOneCnt" destination="oGB-fb-fee" id="UTz-4M-dBv"/>
-                        <outlet property="labelPTwoCnt" destination="h14-eC-AA1" id="IaD-kl-VKB"/>
-                        <segue destination="hLI-AD-FZa" kind="relationship" relationship="nextPage" id="aBj-P2-20W"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="911" y="345"/>
-        </scene>
-        <!--Hole 4-->
-        <scene sceneID="HWb-tW-TNO">
-            <objects>
-                <controller identifier="3" title="Hole 4" id="hLI-AD-FZa" customClass="HoleFourInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="4kx-Yz-3hK">
-                            <items>
-                                <button width="60" alignment="left" title="+" id="wif-lJ-FgQ">
-                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="incrPlayerOneCnt" destination="hLI-AD-FZa" id="Lga-Ma-Skp"/>
-                                    </connections>
-                                </button>
-                                <button width="60" alignment="right" title="+" id="gtu-Fi-Dnu">
-                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="incrPlayerTwoCnt" destination="hLI-AD-FZa" id="X4U-gO-brk"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="0Iz-hk-378">
-                            <items>
-                                <label width="60" alignment="left" text="0" textAlignment="center" id="ZYJ-1B-j0V">
-                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
-                                </label>
-                                <label width="60" alignment="right" text="0" textAlignment="center" id="SAu-Pk-WWw">
-                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
-                                </label>
-                            </items>
-                            <gestureRecognizers>
-                                <longPressGestureRecognizer id="4lu-lE-wwM">
-                                    <connections>
-                                        <action selector="lockButtons:" destination="hLI-AD-FZa" id="CeG-gQ-561"/>
-                                    </connections>
-                                </longPressGestureRecognizer>
-                            </gestureRecognizers>
-                        </group>
-                        <group width="1" alignment="left" id="b3b-lu-ey5">
-                            <items>
-                                <button width="60" height="30" alignment="left" title="-" id="vgQ-t3-tB0">
-                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="decrPlayerOneCnt" destination="hLI-AD-FZa" id="hvM-Mx-DBy"/>
-                                    </connections>
-                                </button>
-                                <button width="60" height="30" alignment="right" title="-" id="hIK-th-CUc">
-                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="decrPlayerTwoCnt" destination="hLI-AD-FZa" id="pMf-Hs-lLl"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="iQJ-Rc-vZD">
-                            <items>
-                                <label width="60" alignment="left" text="P1" textAlignment="center" id="HVs-iC-x4X"/>
-                                <label width="60" alignment="right" text="P2" textAlignment="center" id="MHd-Xs-fPZ"/>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="decrPlayerOneBtn" destination="vgQ-t3-tB0" id="1Vf-WO-DQS"/>
-                        <outlet property="decrPlayerTwoBtn" destination="hIK-th-CUc" id="GMG-Ay-nUF"/>
-                        <outlet property="incrPlayerOneBtn" destination="wif-lJ-FgQ" id="OqU-ks-eZO"/>
-                        <outlet property="incrPlayerTwoBtn" destination="gtu-Fi-Dnu" id="4pS-u2-4Bv"/>
-                        <outlet property="labelPOneCnt" destination="ZYJ-1B-j0V" id="sQ6-gW-ULO"/>
-                        <outlet property="labelPTwoCnt" destination="SAu-Pk-WWw" id="z3y-74-A5J"/>
-                        <segue destination="sr3-PE-WHK" kind="relationship" relationship="nextPage" id="Phr-tF-vob"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="1131" y="345"/>
-        </scene>
-        <!--Hole 5-->
-        <scene sceneID="pF9-RO-ImS">
-            <objects>
-                <controller identifier="4" title="Hole 5" id="sr3-PE-WHK" customClass="HoleFiveInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="4a6-Wi-cWe">
-                            <items>
-                                <button width="60" alignment="left" title="+" id="uQB-Jv-QLI">
-                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="incrPlayerOneCnt" destination="sr3-PE-WHK" id="7WO-MH-vJP"/>
-                                    </connections>
-                                </button>
-                                <button width="60" alignment="right" title="+" id="vMB-6a-hYH">
-                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="incrPlayerTwoCnt" destination="sr3-PE-WHK" id="IIT-g0-hMv"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="JgR-Bo-Vdt">
-                            <items>
-                                <label width="60" alignment="left" text="0" textAlignment="center" id="FWg-C9-vzz">
-                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
-                                </label>
-                                <label width="60" alignment="right" text="0" textAlignment="center" id="ycu-hq-2eS">
-                                    <fontDescription key="font" type="boldSystem" pointSize="25"/>
-                                </label>
-                            </items>
-                            <gestureRecognizers>
-                                <longPressGestureRecognizer id="5ZY-QW-vwv">
-                                    <connections>
-                                        <action selector="lockButtons:" destination="hLI-AD-FZa" id="VJf-vY-OQK"/>
-                                    </connections>
-                                </longPressGestureRecognizer>
-                            </gestureRecognizers>
-                        </group>
-                        <group width="1" alignment="left" id="mhq-yB-6MQ">
-                            <items>
-                                <button width="60" height="30" alignment="left" title="-" id="Pg6-4Y-Myg">
-                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="decrPlayerOneCnt" destination="sr3-PE-WHK" id="jj0-Mg-9xX"/>
-                                    </connections>
-                                </button>
-                                <button width="60" height="30" alignment="right" title="-" id="xPD-YC-1xQ">
-                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <connections>
-                                        <action selector="decrPlayerTwoCnt" destination="sr3-PE-WHK" id="inf-Zz-Oad"/>
-                                    </connections>
-                                </button>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="Kuv-4m-rfO">
-                            <items>
-                                <label width="60" alignment="left" text="P1" textAlignment="center" id="DGo-D1-UPI"/>
-                                <label width="60" alignment="right" text="P2" textAlignment="center" id="IoN-WN-RgO"/>
-                            </items>
-                        </group>
-                    </items>
-                    <connections>
-                        <outlet property="decrPlayerOneBtn" destination="Pg6-4Y-Myg" id="Uvd-Y2-3AT"/>
-                        <outlet property="decrPlayerTwoBtn" destination="xPD-YC-1xQ" id="blt-Iq-xcr"/>
-                        <outlet property="incrPlayerOneBtn" destination="uQB-Jv-QLI" id="dUC-Ft-YNZ"/>
-                        <outlet property="incrPlayerTwoBtn" destination="vMB-6a-hYH" id="8Xu-qD-KBq"/>
-                        <outlet property="labelPOneCnt" destination="FWg-C9-vzz" id="ih6-xs-0Ml"/>
-                        <outlet property="labelPTwoCnt" destination="ycu-hq-2eS" id="yfy-Nq-6T2"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="1367" y="345"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

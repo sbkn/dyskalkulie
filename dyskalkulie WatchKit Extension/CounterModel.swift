@@ -13,6 +13,10 @@ class CounterModel {
     private var strokesPlayerOne = Array(repeating: 0, count: 18)
     private var strokesPlayerTwo = Array(repeating: 0, count: 18)
     
+    func getScoreCard() -> Array<Int> {
+        return strokesPlayerOne + strokesPlayerTwo
+    }
+    
     func getStrokesPlayerOne(hole: Int) -> Int {
         return strokesPlayerOne[hole]
     }
@@ -39,6 +43,11 @@ class CounterModel {
         if strokesPlayerTwo[hole] > 0 {
             strokesPlayerTwo[hole] = strokesPlayerTwo[hole] - 1
         }
+    }
+    
+    func resetRound() {
+        strokesPlayerOne = Array(repeating: 0, count: 18)
+        strokesPlayerTwo = Array(repeating: 0, count: 18)
     }
     
 }
