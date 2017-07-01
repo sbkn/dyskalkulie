@@ -55,7 +55,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBAction func saveData() {
         
-        session?.transferUserInfo(["msg" : "\(model.getScoreCard())"])
+        session?.transferUserInfo(["msg" : model.getScoreCard()])
         WKInterfaceDevice.current().play(.click)
     }
     

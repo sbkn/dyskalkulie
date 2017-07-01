@@ -26,6 +26,22 @@
 		BC1A3EBA1F07BB86008906A2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A3EB91F07BB86008906A2 /* WatchConnectivity.framework */; };
 		BC1A3EBC1F07BB99008906A2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A3EBB1F07BB99008906A2 /* WatchConnectivity.framework */; };
 		BC1A3EBE1F080D7E008906A2 /* ConnectivityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */; };
+		BC1A3EC01F0837E5008906A2 /* HoleThreeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EBF1F0837E5008906A2 /* HoleThreeInterfaceController.swift */; };
+		BC1A3EC21F08380D008906A2 /* HoleFourInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EC11F08380D008906A2 /* HoleFourInterfaceController.swift */; };
+		BC1A3EC41F083827008906A2 /* HoleFiveInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EC31F083827008906A2 /* HoleFiveInterfaceController.swift */; };
+		BC1A3EC61F08383D008906A2 /* HoleSixInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EC51F08383D008906A2 /* HoleSixInterfaceController.swift */; };
+		BC1A3EC81F083B8B008906A2 /* HoleSevenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EC71F083B8B008906A2 /* HoleSevenInterfaceController.swift */; };
+		BC1A3ECA1F083BA7008906A2 /* HoleEightInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EC91F083BA7008906A2 /* HoleEightInterfaceController.swift */; };
+		BC1A3ECC1F083BC6008906A2 /* HoleNineInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ECB1F083BC6008906A2 /* HoleNineInterfaceController.swift */; };
+		BC1A3ECE1F083D1A008906A2 /* HoleTenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ECD1F083D1A008906A2 /* HoleTenInterfaceController.swift */; };
+		BC1A3ED01F083D35008906A2 /* HoleElevenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ECF1F083D35008906A2 /* HoleElevenInterfaceController.swift */; };
+		BC1A3ED21F083D52008906A2 /* HoleTwelveInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ED11F083D52008906A2 /* HoleTwelveInterfaceController.swift */; };
+		BC1A3ED41F083D6B008906A2 /* HoleThirteenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ED31F083D6B008906A2 /* HoleThirteenInterfaceController.swift */; };
+		BC1A3ED61F083D90008906A2 /* HoleFourteenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ED51F083D90008906A2 /* HoleFourteenInterfaceController.swift */; };
+		BC1A3ED81F083DBD008906A2 /* HoleFifteenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ED71F083DBD008906A2 /* HoleFifteenInterfaceController.swift */; };
+		BC1A3EDA1F083DD5008906A2 /* HoleSixteenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3ED91F083DD5008906A2 /* HoleSixteenInterfaceController.swift */; };
+		BC1A3EDC1F083DEF008906A2 /* HoleSeventeenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EDB1F083DEF008906A2 /* HoleSeventeenInterfaceController.swift */; };
+		BC1A3EDE1F083E09008906A2 /* HoleEighteenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EDD1F083E09008906A2 /* HoleEighteenInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +111,22 @@
 		BC1A3EB91F07BB86008906A2 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		BC1A3EBB1F07BB99008906A2 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityHandler.swift; sourceTree = "<group>"; };
+		BC1A3EBF1F0837E5008906A2 /* HoleThreeInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleThreeInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EC11F08380D008906A2 /* HoleFourInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleFourInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EC31F083827008906A2 /* HoleFiveInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleFiveInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EC51F08383D008906A2 /* HoleSixInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleSixInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EC71F083B8B008906A2 /* HoleSevenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleSevenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EC91F083BA7008906A2 /* HoleEightInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleEightInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ECB1F083BC6008906A2 /* HoleNineInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleNineInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ECD1F083D1A008906A2 /* HoleTenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleTenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ECF1F083D35008906A2 /* HoleElevenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleElevenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ED11F083D52008906A2 /* HoleTwelveInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleTwelveInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ED31F083D6B008906A2 /* HoleThirteenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleThirteenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ED51F083D90008906A2 /* HoleFourteenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleFourteenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ED71F083DBD008906A2 /* HoleFifteenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleFifteenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3ED91F083DD5008906A2 /* HoleSixteenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleSixteenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EDB1F083DEF008906A2 /* HoleSeventeenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleSeventeenInterfaceController.swift; sourceTree = "<group>"; };
+		BC1A3EDD1F083E09008906A2 /* HoleEighteenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoleEighteenInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +201,22 @@
 				BC1A3E901F041771008906A2 /* InterfaceController.swift */,
 				BC1A3EA61F041879008906A2 /* HoleOneInterfaceController.swift */,
 				BC1A3EA81F0419BC008906A2 /* HoleTwoInterfaceController.swift */,
+				BC1A3EBF1F0837E5008906A2 /* HoleThreeInterfaceController.swift */,
+				BC1A3EC11F08380D008906A2 /* HoleFourInterfaceController.swift */,
+				BC1A3EC31F083827008906A2 /* HoleFiveInterfaceController.swift */,
+				BC1A3EC51F08383D008906A2 /* HoleSixInterfaceController.swift */,
+				BC1A3EC71F083B8B008906A2 /* HoleSevenInterfaceController.swift */,
+				BC1A3EC91F083BA7008906A2 /* HoleEightInterfaceController.swift */,
+				BC1A3ECB1F083BC6008906A2 /* HoleNineInterfaceController.swift */,
+				BC1A3ECD1F083D1A008906A2 /* HoleTenInterfaceController.swift */,
+				BC1A3ECF1F083D35008906A2 /* HoleElevenInterfaceController.swift */,
+				BC1A3ED11F083D52008906A2 /* HoleTwelveInterfaceController.swift */,
+				BC1A3ED31F083D6B008906A2 /* HoleThirteenInterfaceController.swift */,
+				BC1A3ED51F083D90008906A2 /* HoleFourteenInterfaceController.swift */,
+				BC1A3ED71F083DBD008906A2 /* HoleFifteenInterfaceController.swift */,
+				BC1A3ED91F083DD5008906A2 /* HoleSixteenInterfaceController.swift */,
+				BC1A3EDB1F083DEF008906A2 /* HoleSeventeenInterfaceController.swift */,
+				BC1A3EDD1F083E09008906A2 /* HoleEighteenInterfaceController.swift */,
 				BC1A3E921F041771008906A2 /* ExtensionDelegate.swift */,
 				BC1A3E941F041771008906A2 /* NotificationController.swift */,
 				BC1A3E961F041771008906A2 /* Assets.xcassets */,
@@ -353,12 +401,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A3EC41F083827008906A2 /* HoleFiveInterfaceController.swift in Sources */,
 				BC1A3EA71F041879008906A2 /* HoleOneInterfaceController.swift in Sources */,
+				BC1A3ED21F083D52008906A2 /* HoleTwelveInterfaceController.swift in Sources */,
+				BC1A3ECE1F083D1A008906A2 /* HoleTenInterfaceController.swift in Sources */,
+				BC1A3EDE1F083E09008906A2 /* HoleEighteenInterfaceController.swift in Sources */,
+				BC1A3ED41F083D6B008906A2 /* HoleThirteenInterfaceController.swift in Sources */,
+				BC1A3EC61F08383D008906A2 /* HoleSixInterfaceController.swift in Sources */,
 				BC1A3E951F041771008906A2 /* NotificationController.swift in Sources */,
 				BC1A3EB11F06DFF9008906A2 /* CounterModel.swift in Sources */,
 				BC1A3E931F041771008906A2 /* ExtensionDelegate.swift in Sources */,
+				BC1A3ECC1F083BC6008906A2 /* HoleNineInterfaceController.swift in Sources */,
+				BC1A3EDC1F083DEF008906A2 /* HoleSeventeenInterfaceController.swift in Sources */,
+				BC1A3EC01F0837E5008906A2 /* HoleThreeInterfaceController.swift in Sources */,
+				BC1A3ED01F083D35008906A2 /* HoleElevenInterfaceController.swift in Sources */,
+				BC1A3ECA1F083BA7008906A2 /* HoleEightInterfaceController.swift in Sources */,
+				BC1A3ED61F083D90008906A2 /* HoleFourteenInterfaceController.swift in Sources */,
 				BC1A3E911F041771008906A2 /* InterfaceController.swift in Sources */,
 				BC1A3EA91F0419BC008906A2 /* HoleTwoInterfaceController.swift in Sources */,
+				BC1A3EDA1F083DD5008906A2 /* HoleSixteenInterfaceController.swift in Sources */,
+				BC1A3ED81F083DBD008906A2 /* HoleFifteenInterfaceController.swift in Sources */,
+				BC1A3EC21F08380D008906A2 /* HoleFourInterfaceController.swift in Sources */,
+				BC1A3EC81F083B8B008906A2 /* HoleSevenInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

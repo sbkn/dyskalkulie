@@ -14,7 +14,7 @@ class ConnectivityHandler : NSObject, WCSessionDelegate {
     
     var session = WCSession.default()
     
-    dynamic var messages = [String]()
+    dynamic var messages = [Int]()
     
     override init() {
         super.init()
@@ -48,20 +48,22 @@ class ConnectivityHandler : NSObject, WCSessionDelegate {
         }
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        let msg = message["msg"]!
-        self.messages.append("Message \(msg)")
-        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
-    }
-    
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        let msg = applicationContext["msg"]!
-        self.messages.append("AppContext \(msg)")
-   	}
+//    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+//        let msg = message["msg"]!
+//        self.messages.append("Message \(msg)")
+//        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+//    }
+//    
+//    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+//        let msg = applicationContext["msg"]!
+//        self.messages.append("AppContext \(msg)")
+//   	}
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         let msg = userInfo["msg"]!
-        self.messages.append("\(msg)")
+        if let arr = msg as? [Int] {
+            self.messages = arr
+        }
    	}
     
 }
