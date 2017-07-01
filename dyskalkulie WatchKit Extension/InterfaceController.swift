@@ -55,17 +55,12 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     @IBAction func saveData() {
         
-        session?.sendMessage(["request" : "date"],
-                             replyHandler: { (response) in
-                                self.messages.append("Reply: \(response)")
-        },
-                             errorHandler: { (error) in
-                                print("Error sending message: %@", error)
-        }
-        )
+        session?.transferUserInfo(["msg" : "\(model.getScoreCard())"])
+        WKInterfaceDevice.current().play(.click)
     }
     
     @IBAction func resetRound() {
         model.resetRound()
+        WKInterfaceDevice.current().play(.click)
     }
 }

@@ -61,7 +61,7 @@ class ConnectivityHandler : NSObject, WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         let msg = userInfo["msg"]!
-        self.messages.append("UserInfo \(msg)")
+        self.messages.append("\(msg)")
    	}
     
 }
