@@ -42,9 +42,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     override func contextsForSegue(withIdentifier segueIdentifier: String) -> [Any]? {
         
-        var modelArr = [["model": model]]
-        for _ in 1...17 {
-            modelArr.append(["model": model])
+        var modelArr = [["model": model, "index": 0]]
+        for index in 1...17 {
+            modelArr.append(["model": model, "index": index])
         }
         return modelArr
     }

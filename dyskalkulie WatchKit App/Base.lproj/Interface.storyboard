@@ -118,20 +118,20 @@
         <!--Hole 2-->
         <scene sceneID="lX1-3V-Fxw">
             <objects>
-                <controller identifier="1" title="Hole 2" id="x3F-7q-r3V" customClass="HoleTwoInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="1" title="Hole 2" id="x3F-7q-r3V" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="oGL-Nq-T0X">
                             <items>
                                 <button width="60" alignment="left" title="+" id="nLG-Ua-Gby">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerOneCnt" destination="VKK-xn-SNf" id="Kew-5T-fGh"/>
+                                        <action selector="incrPlayerOneCnt" destination="x3F-7q-r3V" id="cBZ-cp-NEg"/>
                                     </connections>
                                 </button>
                                 <button width="60" alignment="right" title="+" id="Qtv-Bx-f6C">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerTwoCnt" destination="VKK-xn-SNf" id="rLc-xB-2T8"/>
+                                        <action selector="incrPlayerTwoCnt" destination="x3F-7q-r3V" id="DE1-eY-roR"/>
                                     </connections>
                                 </button>
                             </items>
@@ -148,7 +148,7 @@
                             <gestureRecognizers>
                                 <longPressGestureRecognizer id="Jd3-xp-kfl">
                                     <connections>
-                                        <action selector="lockButtons:" destination="x3F-7q-r3V" id="YhS-mf-aqR"/>
+                                        <action selector="lockButtons:" destination="x3F-7q-r3V" id="zqz-8P-uGi"/>
                                     </connections>
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
@@ -158,13 +158,13 @@
                                 <button width="60" height="30" alignment="left" title="-" id="p1i-Gl-Q2f">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerOneCnt" destination="VKK-xn-SNf" id="Ofg-5c-Ttn"/>
+                                        <action selector="decrPlayerOneCnt" destination="x3F-7q-r3V" id="sN7-9I-7Dj"/>
                                     </connections>
                                 </button>
                                 <button width="60" height="30" alignment="right" title="-" id="NrE-UE-zNo">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerTwoCnt" destination="VKK-xn-SNf" id="YaK-Ib-hBK"/>
+                                        <action selector="decrPlayerTwoCnt" destination="x3F-7q-r3V" id="zoh-J1-NZl"/>
                                     </connections>
                                 </button>
                             </items>
@@ -177,12 +177,12 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="decrPlayerOneBtn" destination="p1i-Gl-Q2f" id="ays-Kx-Vh3"/>
-                        <outlet property="decrPlayerTwoBtn" destination="NrE-UE-zNo" id="MtG-fu-6b8"/>
-                        <outlet property="incrPlayerOneBtn" destination="nLG-Ua-Gby" id="ugP-l4-ETG"/>
-                        <outlet property="incrPlayerTwoBtn" destination="Qtv-Bx-f6C" id="Pk5-PR-k0v"/>
-                        <outlet property="labelPOneCnt" destination="Rv8-f1-kXE" id="mkx-H9-7Fg"/>
-                        <outlet property="labelPTwoCnt" destination="1cM-jw-40u" id="Gci-LI-cQa"/>
+                        <outlet property="decrPlayerOneBtn" destination="p1i-Gl-Q2f" id="Txg-mQ-d0T"/>
+                        <outlet property="decrPlayerTwoBtn" destination="NrE-UE-zNo" id="Baq-iF-Y4Z"/>
+                        <outlet property="incrPlayerOneBtn" destination="nLG-Ua-Gby" id="bjH-oe-B3n"/>
+                        <outlet property="incrPlayerTwoBtn" destination="Qtv-Bx-f6C" id="Lux-qC-cdI"/>
+                        <outlet property="labelPOneCnt" destination="Rv8-f1-kXE" id="eQU-aC-tx0"/>
+                        <outlet property="labelPTwoCnt" destination="1cM-jw-40u" id="0zd-XA-3P5"/>
                         <segue destination="eUD-kL-u6q" kind="relationship" relationship="nextPage" id="0ve-kG-mmq"/>
                     </connections>
                 </controller>
@@ -192,20 +192,20 @@
         <!--Hole 3-->
         <scene sceneID="C5Z-xM-FM2">
             <objects>
-                <controller identifier="2" title="Hole 3" id="eUD-kL-u6q" customClass="HoleThreeInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="2" title="Hole 3" id="eUD-kL-u6q" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="M4i-sV-4cr">
                             <items>
                                 <button width="60" alignment="left" title="+" id="iSj-xB-L1c">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerOneCnt" destination="eUD-kL-u6q" id="PWq-HR-2es"/>
+                                        <action selector="incrPlayerOneCnt" destination="eUD-kL-u6q" id="gW0-Ub-H1q"/>
                                     </connections>
                                 </button>
                                 <button width="60" alignment="right" title="+" id="cxE-nL-jfw">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerTwoCnt" destination="eUD-kL-u6q" id="F9G-8C-5M4"/>
+                                        <action selector="incrPlayerTwoCnt" destination="eUD-kL-u6q" id="K9w-hM-y5P"/>
                                     </connections>
                                 </button>
                             </items>
@@ -222,7 +222,7 @@
                             <gestureRecognizers>
                                 <longPressGestureRecognizer id="XKU-cN-noz">
                                     <connections>
-                                        <action selector="lockButtons:" destination="eUD-kL-u6q" id="tfo-we-gq5"/>
+                                        <action selector="lockButtons:" destination="eUD-kL-u6q" id="wne-47-AM4"/>
                                     </connections>
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
@@ -232,13 +232,13 @@
                                 <button width="60" height="30" alignment="left" title="-" id="fnM-I8-dB0">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerOneCnt" destination="eUD-kL-u6q" id="HWw-hM-Z89"/>
+                                        <action selector="decrPlayerOneCnt" destination="eUD-kL-u6q" id="lRz-3z-ZJu"/>
                                     </connections>
                                 </button>
                                 <button width="60" height="30" alignment="right" title="-" id="3Cl-Pd-rUU">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerTwoCnt" destination="eUD-kL-u6q" id="uLJ-GH-87W"/>
+                                        <action selector="decrPlayerTwoCnt" destination="eUD-kL-u6q" id="9wy-Iz-qRP"/>
                                     </connections>
                                 </button>
                             </items>
@@ -251,12 +251,12 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="decrPlayerOneBtn" destination="fnM-I8-dB0" id="ArJ-IH-alG"/>
-                        <outlet property="decrPlayerTwoBtn" destination="3Cl-Pd-rUU" id="PS8-7J-e4U"/>
-                        <outlet property="incrPlayerOneBtn" destination="iSj-xB-L1c" id="aAE-8B-a3g"/>
-                        <outlet property="incrPlayerTwoBtn" destination="cxE-nL-jfw" id="XoS-FU-d97"/>
-                        <outlet property="labelPOneCnt" destination="yLa-nE-9Q8" id="NsK-Fn-Bky"/>
-                        <outlet property="labelPTwoCnt" destination="DMa-iI-Yra" id="SVZ-jj-SXY"/>
+                        <outlet property="decrPlayerOneBtn" destination="fnM-I8-dB0" id="xBy-0N-h7H"/>
+                        <outlet property="decrPlayerTwoBtn" destination="3Cl-Pd-rUU" id="eYS-Ee-i7o"/>
+                        <outlet property="incrPlayerOneBtn" destination="iSj-xB-L1c" id="2fa-Md-MKp"/>
+                        <outlet property="incrPlayerTwoBtn" destination="cxE-nL-jfw" id="d8T-cz-aIC"/>
+                        <outlet property="labelPOneCnt" destination="yLa-nE-9Q8" id="1gl-QY-jGU"/>
+                        <outlet property="labelPTwoCnt" destination="DMa-iI-Yra" id="3IO-A9-JeX"/>
                         <segue destination="Lsq-xO-185" kind="relationship" relationship="nextPage" id="4sh-0R-aJu"/>
                     </connections>
                 </controller>
@@ -266,20 +266,20 @@
         <!--Hole 4-->
         <scene sceneID="AvU-OM-txf">
             <objects>
-                <controller identifier="3" title="Hole 4" id="Lsq-xO-185" customClass="HoleFourInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="3" title="Hole 4" id="Lsq-xO-185" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="fVW-Vo-BTB">
                             <items>
                                 <button width="60" alignment="left" title="+" id="C3D-EL-YpD">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerOneCnt" destination="Lsq-xO-185" id="GGZ-9V-vsy"/>
+                                        <action selector="incrPlayerOneCnt" destination="Lsq-xO-185" id="SYx-mI-Ebi"/>
                                     </connections>
                                 </button>
                                 <button width="60" alignment="right" title="+" id="X3P-v0-jbV">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerTwoCnt" destination="Lsq-xO-185" id="qBf-BK-fLt"/>
+                                        <action selector="incrPlayerTwoCnt" destination="Lsq-xO-185" id="9sc-09-4tp"/>
                                     </connections>
                                 </button>
                             </items>
@@ -296,7 +296,7 @@
                             <gestureRecognizers>
                                 <longPressGestureRecognizer id="OJz-Dp-rPQ">
                                     <connections>
-                                        <action selector="lockButtons:" destination="Lsq-xO-185" id="cac-jf-ScW"/>
+                                        <action selector="lockButtons:" destination="Lsq-xO-185" id="ayM-qU-4Mx"/>
                                     </connections>
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
@@ -306,13 +306,13 @@
                                 <button width="60" height="30" alignment="left" title="-" id="K2y-Gb-Wzj">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerOneCnt" destination="Lsq-xO-185" id="oml-bd-4wu"/>
+                                        <action selector="decrPlayerOneCnt" destination="Lsq-xO-185" id="e14-YZ-JKn"/>
                                     </connections>
                                 </button>
                                 <button width="60" height="30" alignment="right" title="-" id="Zk6-V4-npa">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerTwoCnt" destination="Lsq-xO-185" id="V80-fc-sbo"/>
+                                        <action selector="decrPlayerTwoCnt" destination="Lsq-xO-185" id="2wd-g7-3Lh"/>
                                     </connections>
                                 </button>
                             </items>
@@ -325,12 +325,12 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="decrPlayerOneBtn" destination="K2y-Gb-Wzj" id="m2Y-8t-4XR"/>
-                        <outlet property="decrPlayerTwoBtn" destination="Zk6-V4-npa" id="QCn-Ev-s65"/>
-                        <outlet property="incrPlayerOneBtn" destination="C3D-EL-YpD" id="ubf-pY-dxg"/>
-                        <outlet property="incrPlayerTwoBtn" destination="X3P-v0-jbV" id="jmh-Wf-Tin"/>
-                        <outlet property="labelPOneCnt" destination="5eV-Yz-QaM" id="fA2-JG-LI2"/>
-                        <outlet property="labelPTwoCnt" destination="jQx-IQ-Be7" id="egh-Af-4Ei"/>
+                        <outlet property="decrPlayerOneBtn" destination="K2y-Gb-Wzj" id="KeT-6B-PDu"/>
+                        <outlet property="decrPlayerTwoBtn" destination="Zk6-V4-npa" id="JrM-TQ-Wnx"/>
+                        <outlet property="incrPlayerOneBtn" destination="C3D-EL-YpD" id="Lrd-GO-YTF"/>
+                        <outlet property="incrPlayerTwoBtn" destination="X3P-v0-jbV" id="moP-4G-LxI"/>
+                        <outlet property="labelPOneCnt" destination="5eV-Yz-QaM" id="i3h-dB-2lg"/>
+                        <outlet property="labelPTwoCnt" destination="jQx-IQ-Be7" id="mNZ-9V-8UU"/>
                         <segue destination="Pek-1Z-mLH" kind="relationship" relationship="nextPage" id="tki-Se-vKg"/>
                     </connections>
                 </controller>
@@ -340,20 +340,20 @@
         <!--Hole 5-->
         <scene sceneID="FNR-cS-LS5">
             <objects>
-                <controller identifier="4" title="Hole 5" id="Pek-1Z-mLH" customClass="HoleFiveInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="4" title="Hole 5" id="Pek-1Z-mLH" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="UVj-Of-O18">
                             <items>
                                 <button width="60" alignment="left" title="+" id="Jam-z3-og9">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerOneCnt" destination="Pek-1Z-mLH" id="r2O-87-7hS"/>
+                                        <action selector="incrPlayerOneCnt" destination="Pek-1Z-mLH" id="e1e-hn-nDW"/>
                                     </connections>
                                 </button>
                                 <button width="60" alignment="right" title="+" id="faQ-s8-Yvu">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="incrPlayerTwoCnt" destination="Pek-1Z-mLH" id="mx6-Wb-VLA"/>
+                                        <action selector="incrPlayerTwoCnt" destination="Pek-1Z-mLH" id="vWc-Ed-QUs"/>
                                     </connections>
                                 </button>
                             </items>
@@ -370,7 +370,7 @@
                             <gestureRecognizers>
                                 <longPressGestureRecognizer id="qpT-k6-gvk">
                                     <connections>
-                                        <action selector="lockButtons:" destination="Pek-1Z-mLH" id="0jp-xO-ocV"/>
+                                        <action selector="lockButtons:" destination="Pek-1Z-mLH" id="QkR-zp-97A"/>
                                     </connections>
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
@@ -380,13 +380,13 @@
                                 <button width="60" height="30" alignment="left" title="-" id="ksd-Z9-yBc">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerOneCnt" destination="Pek-1Z-mLH" id="zVU-gr-AkL"/>
+                                        <action selector="decrPlayerOneCnt" destination="Pek-1Z-mLH" id="5Em-mr-n22"/>
                                     </connections>
                                 </button>
                                 <button width="60" height="30" alignment="right" title="-" id="VRM-LQ-Wj4">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
-                                        <action selector="decrPlayerTwoCnt" destination="Pek-1Z-mLH" id="4rV-WU-CJB"/>
+                                        <action selector="decrPlayerTwoCnt" destination="Pek-1Z-mLH" id="lyS-V9-zbM"/>
                                     </connections>
                                 </button>
                             </items>
@@ -399,12 +399,12 @@
                         </group>
                     </items>
                     <connections>
-                        <outlet property="decrPlayerOneBtn" destination="ksd-Z9-yBc" id="NDm-XO-Jdf"/>
-                        <outlet property="decrPlayerTwoBtn" destination="VRM-LQ-Wj4" id="UiK-KH-Jjl"/>
-                        <outlet property="incrPlayerOneBtn" destination="Jam-z3-og9" id="jej-gW-XHV"/>
-                        <outlet property="incrPlayerTwoBtn" destination="faQ-s8-Yvu" id="dGA-Xh-TjX"/>
-                        <outlet property="labelPOneCnt" destination="AwE-fb-ENP" id="Hyb-W5-F8L"/>
-                        <outlet property="labelPTwoCnt" destination="zmp-Zj-GU7" id="MZx-t8-AZW"/>
+                        <outlet property="decrPlayerOneBtn" destination="ksd-Z9-yBc" id="W7p-aJ-71x"/>
+                        <outlet property="decrPlayerTwoBtn" destination="VRM-LQ-Wj4" id="eL1-7L-lap"/>
+                        <outlet property="incrPlayerOneBtn" destination="Jam-z3-og9" id="Ykd-cw-oRa"/>
+                        <outlet property="incrPlayerTwoBtn" destination="faQ-s8-Yvu" id="Up8-ko-0EL"/>
+                        <outlet property="labelPOneCnt" destination="AwE-fb-ENP" id="7f3-X5-BYv"/>
+                        <outlet property="labelPTwoCnt" destination="zmp-Zj-GU7" id="bro-8x-aGU"/>
                         <segue destination="k82-MT-gl6" kind="relationship" relationship="nextPage" id="Mo6-Y3-Ot4"/>
                     </connections>
                 </controller>
@@ -414,7 +414,7 @@
         <!--Hole 6-->
         <scene sceneID="xmh-nA-f99">
             <objects>
-                <controller identifier="5" title="Hole 6" id="k82-MT-gl6" customClass="HoleSixInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="5" title="Hole 6" id="k82-MT-gl6" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="UfK-Wg-qyf">
                             <items>
@@ -488,7 +488,7 @@
         <!--Hole 7-->
         <scene sceneID="36J-oH-RpB">
             <objects>
-                <controller identifier="6" title="Hole 7" id="oA7-vO-uuS" customClass="HoleSevenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="6" title="Hole 7" id="oA7-vO-uuS" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="9RZ-Vx-xH0">
                             <items>
@@ -562,7 +562,7 @@
         <!--Hole 8-->
         <scene sceneID="pfQ-lC-GKi">
             <objects>
-                <controller identifier="7" title="Hole 8" id="FJG-43-VSK" customClass="HoleEightInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="7" title="Hole 8" id="FJG-43-VSK" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="P8M-RF-xSM">
                             <items>
@@ -636,7 +636,7 @@
         <!--Hole 9-->
         <scene sceneID="GaP-d8-3me">
             <objects>
-                <controller identifier="8" title="Hole 9" id="fuX-IL-QGL" customClass="HoleNineInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="8" title="Hole 9" id="fuX-IL-QGL" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="Lu8-q3-hPe">
                             <items>
@@ -710,7 +710,7 @@
         <!--Hole 10-->
         <scene sceneID="XTr-W9-V3I">
             <objects>
-                <controller identifier="9" title="Hole 10" id="wZL-JS-YG4" customClass="HoleTenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="9" title="Hole 10" id="wZL-JS-YG4" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="iHu-9b-aMZ">
                             <items>
@@ -784,7 +784,7 @@
         <!--Hole 11-->
         <scene sceneID="jRm-ez-e5w">
             <objects>
-                <controller identifier="10" title="Hole 11" id="JHc-br-nXK" customClass="HoleElevenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="10" title="Hole 11" id="JHc-br-nXK" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="AZX-xo-PSu">
                             <items>
@@ -858,7 +858,7 @@
         <!--Hole 12-->
         <scene sceneID="kKv-eX-jee">
             <objects>
-                <controller identifier="11" title="Hole 12" id="D8L-u3-jq0" customClass="HoleTwelveInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="11" title="Hole 12" id="D8L-u3-jq0" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="CxT-UW-1mD">
                             <items>
@@ -932,7 +932,7 @@
         <!--Hole 13-->
         <scene sceneID="weH-Fh-zHf">
             <objects>
-                <controller identifier="12" title="Hole 13" id="Yja-0r-cdR" customClass="HoleThirteenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="12" title="Hole 13" id="Yja-0r-cdR" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="wde-Gh-Vgx">
                             <items>
@@ -1006,7 +1006,7 @@
         <!--Hole 14-->
         <scene sceneID="QpY-ry-mat">
             <objects>
-                <controller identifier="13" title="Hole 14" id="cWN-K5-b0C" customClass="HoleFourteenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="13" title="Hole 14" id="cWN-K5-b0C" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="xXw-B9-ZsB">
                             <items>
@@ -1080,7 +1080,7 @@
         <!--Hole 15-->
         <scene sceneID="3xQ-W2-NYT">
             <objects>
-                <controller identifier="14" title="Hole 15" id="3Jg-qA-7bg" customClass="HoleFifteenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="14" title="Hole 15" id="3Jg-qA-7bg" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="AkM-wr-Juv">
                             <items>
@@ -1154,7 +1154,7 @@
         <!--Hole 16-->
         <scene sceneID="yYK-bO-p0q">
             <objects>
-                <controller identifier="15" title="Hole 16" id="QeL-rq-vom" customClass="HoleSixteenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="15" title="Hole 16" id="QeL-rq-vom" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="GyG-xL-lK4">
                             <items>
@@ -1228,7 +1228,7 @@
         <!--Hole 17-->
         <scene sceneID="qi0-cT-IHd">
             <objects>
-                <controller identifier="16" title="Hole 17" id="sNf-s9-m1A" customClass="HoleSeventeenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="16" title="Hole 17" id="sNf-s9-m1A" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="ySz-1u-Wsu">
                             <items>
@@ -1302,7 +1302,7 @@
         <!--Hole 18-->
         <scene sceneID="UwC-ow-VW6">
             <objects>
-                <controller identifier="17" title="Hole 18" id="56i-fJ-aY9" customClass="HoleEighteenInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
+                <controller identifier="17" title="Hole 18" id="56i-fJ-aY9" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="1HF-of-j4z">
                             <items>

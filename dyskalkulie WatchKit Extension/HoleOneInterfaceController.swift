@@ -20,19 +20,20 @@ class HoleOneInterfaceController: WKInterfaceController {
     @IBOutlet var incrPlayerTwoBtn: WKInterfaceButton!
     @IBOutlet var decrPlayerTwoBtn: WKInterfaceButton!
     
-    let holeIndex : Int = 0
+    var holeIndex : Int?
     var buttonsAreLocked : Bool = false
-    
     var model: CounterModel?
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        if let val = context as? [String: CounterModel] {
-            model = val["model"]
+        if let val = context as? [String: Any] {
+            model = val["model"] as? CounterModel
+            holeIndex = val["index"] as? Int
         }
-        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex).description)
-        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex).description)
+        
+        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex!).description)
+        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex!).description)
     }
     
     override func willActivate() {
@@ -59,8 +60,8 @@ class HoleOneInterfaceController: WKInterfaceController {
         if buttonsAreLocked {
             return
         }
-        model?.incrementStrokesPlayerOne(hole: holeIndex)
-        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex).description)
+        model?.incrementStrokesPlayerOne(hole: holeIndex!)
+        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex!).description)
         WKInterfaceDevice.current().play(.click)
     }
     
@@ -68,8 +69,8 @@ class HoleOneInterfaceController: WKInterfaceController {
         if buttonsAreLocked {
             return
         }
-        model?.decrementStrokesPlayerOne(hole: holeIndex)
-        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex).description)
+        model?.decrementStrokesPlayerOne(hole: holeIndex!)
+        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex!).description)
         WKInterfaceDevice.current().play(.click)
     }
     
@@ -77,8 +78,8 @@ class HoleOneInterfaceController: WKInterfaceController {
         if buttonsAreLocked {
             return
         }
-        model?.incrementStrokesPlayerTwo(hole: holeIndex)
-        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex).description)
+        model?.incrementStrokesPlayerTwo(hole: holeIndex!)
+        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex!).description)
         WKInterfaceDevice.current().play(.click)
     }
     
@@ -86,8 +87,8 @@ class HoleOneInterfaceController: WKInterfaceController {
         if buttonsAreLocked {
             return
         }
-        model?.decrementStrokesPlayerTwo(hole: holeIndex)
-        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex).description)
+        model?.decrementStrokesPlayerTwo(hole: holeIndex!)
+        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex!).description)
         WKInterfaceDevice.current().play(.click)
     }
 }
