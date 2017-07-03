@@ -15,27 +15,40 @@
                 <controller identifier="main" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="dyskalkulie_WatchKit_App" customModuleProvider="target">
                     <items>
                         <label alignment="center" text="Dyskalkulie" id="2PD-0p-UaF"/>
-                        <button width="1" alignment="center" verticalAlignment="center" title="Start" id="ejf-sK-EcL">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <segue destination="VKK-xn-SNf" kind="modal" id="3CB-lh-UpA"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="center" verticalAlignment="center" title="Save" id="F04-fK-k6X">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="saveData" destination="AgC-eL-Hgc" id="nPX-re-OEU"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="center" verticalAlignment="center" title="Reset" id="3Oq-gN-cfd">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="resetRound" destination="AgC-eL-Hgc" id="nI1-Rt-5dM"/>
-                            </connections>
-                        </button>
+                        <group width="1" alignment="left" id="zUK-e5-nca">
+                            <items>
+                                <button width="1" alignment="center" verticalAlignment="center" title="Start" id="ejf-sK-EcL">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <segue destination="VKK-xn-SNf" kind="modal" id="3CB-lh-UpA"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="M3f-1X-bcl">
+                            <items>
+                                <button width="1" alignment="center" verticalAlignment="center" title="Save" id="F04-fK-k6X">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="saveData" destination="AgC-eL-Hgc" id="nPX-re-OEU"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="15" bottom="15"/>
+                        </group>
+                        <group width="1" alignment="left" id="cEl-zC-sUf">
+                            <items>
+                                <button width="1" alignment="center" verticalAlignment="center" title="Reset" id="3Oq-gN-cfd">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="resetRound" destination="AgC-eL-Hgc" id="nI1-Rt-5dM"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                 </controller>
             </objects>
@@ -46,15 +59,15 @@
             <objects>
                 <controller identifier="0" title="Hole 1" id="VKK-xn-SNf" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="4Pe-9b-UWN">
+                        <group width="1" alignment="left" verticalAlignment="center" id="4Pe-9b-UWN">
                             <items>
-                                <button width="60" alignment="left" title="+" id="mcp-c3-fd9">
+                                <button width="60" height="45" alignment="left" title="+" id="mcp-c3-fd9">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="VKK-xn-SNf" id="9sf-ms-fJc"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="Zar-QQ-oBx">
+                                <button width="60" height="45" alignment="right" title="+" id="Zar-QQ-oBx">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="VKK-xn-SNf" id="LN1-uv-YOJ"/>
@@ -62,7 +75,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="Zpl-OQ-shQ">
+                        <group width="1" alignment="left" verticalAlignment="center" id="Zpl-OQ-shQ">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="dpa-iM-mYD">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -79,15 +92,15 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="sES-pw-BP9">
+                        <group width="1" alignment="left" verticalAlignment="center" id="sES-pw-BP9">
                             <items>
-                                <button width="60" height="30" alignment="left" title="-" id="7Y4-6L-ZyH">
+                                <button width="60" height="25" alignment="left" title="-" id="7Y4-6L-ZyH">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="decrPlayerOneCnt" destination="VKK-xn-SNf" id="yWE-gE-hqq"/>
                                     </connections>
                                 </button>
-                                <button width="60" height="30" alignment="right" title="-" id="zEK-wy-vMs">
+                                <button width="60" height="25" alignment="right" title="-" id="zEK-wy-vMs">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="decrPlayerTwoCnt" destination="VKK-xn-SNf" id="fpQ-su-C4p"/>
@@ -95,7 +108,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="4o6-Nz-any">
+                        <group width="1" alignment="left" verticalAlignment="center" id="4o6-Nz-any">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="537-w4-Aey"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="wst-r7-6Mr"/>
@@ -120,15 +133,15 @@
             <objects>
                 <controller identifier="1" title="Hole 2" id="x3F-7q-r3V" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="oGL-Nq-T0X">
+                        <group width="1" alignment="left" verticalAlignment="center" id="oGL-Nq-T0X">
                             <items>
-                                <button width="60" alignment="left" title="+" id="nLG-Ua-Gby">
+                                <button width="60" height="45" alignment="left" title="+" id="nLG-Ua-Gby">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="x3F-7q-r3V" id="cBZ-cp-NEg"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="Qtv-Bx-f6C">
+                                <button width="60" height="45" alignment="right" title="+" id="Qtv-Bx-f6C">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="x3F-7q-r3V" id="DE1-eY-roR"/>
@@ -136,7 +149,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="Xmv-re-PBY">
+                        <group width="1" alignment="left" verticalAlignment="center" id="Xmv-re-PBY">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="Rv8-f1-kXE">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -153,7 +166,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="Nas-nu-Pab">
+                        <group width="1" alignment="left" verticalAlignment="center" id="Nas-nu-Pab">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="p1i-Gl-Q2f">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -169,7 +182,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="4kr-31-xs3">
+                        <group width="1" alignment="left" verticalAlignment="center" id="4kr-31-xs3">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="YfK-pk-jaq"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="gAL-B8-nJs"/>
@@ -194,15 +207,15 @@
             <objects>
                 <controller identifier="2" title="Hole 3" id="eUD-kL-u6q" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="M4i-sV-4cr">
+                        <group width="1" alignment="left" verticalAlignment="center" id="M4i-sV-4cr">
                             <items>
-                                <button width="60" alignment="left" title="+" id="iSj-xB-L1c">
+                                <button width="60" height="45" alignment="left" title="+" id="iSj-xB-L1c">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="eUD-kL-u6q" id="gW0-Ub-H1q"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="cxE-nL-jfw">
+                                <button width="60" height="45" alignment="right" title="+" id="cxE-nL-jfw">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="eUD-kL-u6q" id="K9w-hM-y5P"/>
@@ -210,7 +223,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="cPy-BE-7gi">
+                        <group width="1" alignment="left" verticalAlignment="center" id="cPy-BE-7gi">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="yLa-nE-9Q8">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -227,7 +240,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="5Gj-ce-CtJ">
+                        <group width="1" alignment="left" verticalAlignment="center" id="5Gj-ce-CtJ">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="fnM-I8-dB0">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -243,7 +256,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="rx1-nA-ty1">
+                        <group width="1" alignment="left" verticalAlignment="center" id="rx1-nA-ty1">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="qAb-mE-NEC"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="67e-dw-DR1"/>
@@ -268,15 +281,15 @@
             <objects>
                 <controller identifier="3" title="Hole 4" id="Lsq-xO-185" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="fVW-Vo-BTB">
+                        <group width="1" alignment="left" verticalAlignment="center" id="fVW-Vo-BTB">
                             <items>
-                                <button width="60" alignment="left" title="+" id="C3D-EL-YpD">
+                                <button width="60" height="45" alignment="left" title="+" id="C3D-EL-YpD">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="Lsq-xO-185" id="SYx-mI-Ebi"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="X3P-v0-jbV">
+                                <button width="60" height="45" alignment="right" title="+" id="X3P-v0-jbV">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="Lsq-xO-185" id="9sc-09-4tp"/>
@@ -284,7 +297,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="pwr-xc-Mik">
+                        <group width="1" alignment="left" verticalAlignment="center" id="pwr-xc-Mik">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="5eV-Yz-QaM">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -301,7 +314,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="AJq-MH-MIi">
+                        <group width="1" alignment="left" verticalAlignment="center" id="AJq-MH-MIi">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="K2y-Gb-Wzj">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -317,7 +330,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="c1u-1W-Eaw">
+                        <group width="1" alignment="left" verticalAlignment="center" id="c1u-1W-Eaw">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="UgQ-qc-fBf"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="MSe-ij-pRR"/>
@@ -342,15 +355,15 @@
             <objects>
                 <controller identifier="4" title="Hole 5" id="Pek-1Z-mLH" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="UVj-Of-O18">
+                        <group width="1" alignment="left" verticalAlignment="center" id="UVj-Of-O18">
                             <items>
-                                <button width="60" alignment="left" title="+" id="Jam-z3-og9">
+                                <button width="60" height="45" alignment="left" title="+" id="Jam-z3-og9">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="Pek-1Z-mLH" id="e1e-hn-nDW"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="faQ-s8-Yvu">
+                                <button width="60" height="45" alignment="right" title="+" id="faQ-s8-Yvu">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="Pek-1Z-mLH" id="vWc-Ed-QUs"/>
@@ -358,7 +371,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="b2f-6T-2ua">
+                        <group width="1" alignment="left" verticalAlignment="center" id="b2f-6T-2ua">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="AwE-fb-ENP">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -375,7 +388,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="lau-aq-NdG">
+                        <group width="1" alignment="left" verticalAlignment="center" id="lau-aq-NdG">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="ksd-Z9-yBc">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -391,7 +404,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="bbg-uZ-gGc">
+                        <group width="1" alignment="left" verticalAlignment="center" id="bbg-uZ-gGc">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="VC4-b8-yqR"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="iOR-Rz-oo6"/>
@@ -416,15 +429,15 @@
             <objects>
                 <controller identifier="5" title="Hole 6" id="k82-MT-gl6" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="UfK-Wg-qyf">
+                        <group width="1" alignment="left" verticalAlignment="center" id="UfK-Wg-qyf">
                             <items>
-                                <button width="60" alignment="left" title="+" id="BdE-YT-02s">
+                                <button width="60" height="45" alignment="left" title="+" id="BdE-YT-02s">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="k82-MT-gl6" id="ma5-wr-pTo"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="6hf-bY-8UZ">
+                                <button width="60" height="45" alignment="right" title="+" id="6hf-bY-8UZ">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="k82-MT-gl6" id="P61-I7-zpT"/>
@@ -432,7 +445,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="Mbv-2s-7va">
+                        <group width="1" alignment="left" verticalAlignment="center" id="Mbv-2s-7va">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="kTW-bI-01N">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -449,7 +462,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="8Nx-E8-NHD">
+                        <group width="1" alignment="left" verticalAlignment="center" id="8Nx-E8-NHD">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="NQD-w6-0dB">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -465,7 +478,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="JHk-8n-qqO">
+                        <group width="1" alignment="left" verticalAlignment="center" id="JHk-8n-qqO">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="B2u-0h-Kpy"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="W21-wK-1a0"/>
@@ -490,15 +503,15 @@
             <objects>
                 <controller identifier="6" title="Hole 7" id="oA7-vO-uuS" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="9RZ-Vx-xH0">
+                        <group width="1" alignment="left" verticalAlignment="center" id="9RZ-Vx-xH0">
                             <items>
-                                <button width="60" alignment="left" title="+" id="fsv-n4-E2s">
+                                <button width="60" height="45" alignment="left" title="+" id="fsv-n4-E2s">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="oA7-vO-uuS" id="Zfo-TP-sAO"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="oKM-Uo-YCi">
+                                <button width="60" height="45" alignment="right" title="+" id="oKM-Uo-YCi">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="oA7-vO-uuS" id="lIq-7U-PZo"/>
@@ -506,7 +519,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="O5v-B0-a25">
+                        <group width="1" alignment="left" verticalAlignment="center" id="O5v-B0-a25">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="IZT-lc-FGO">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -523,7 +536,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="4ho-90-8BC">
+                        <group width="1" alignment="left" verticalAlignment="center" id="4ho-90-8BC">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="Lkj-7A-9t6">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -539,7 +552,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="mdb-iT-D7y">
+                        <group width="1" alignment="left" verticalAlignment="center" id="mdb-iT-D7y">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="fTL-mo-Tcs"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="1Py-kh-9Oj"/>
@@ -564,15 +577,15 @@
             <objects>
                 <controller identifier="7" title="Hole 8" id="FJG-43-VSK" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="P8M-RF-xSM">
+                        <group width="1" alignment="left" verticalAlignment="center" id="P8M-RF-xSM">
                             <items>
-                                <button width="60" alignment="left" title="+" id="z3S-TT-6UI">
+                                <button width="60" height="45" alignment="left" title="+" id="z3S-TT-6UI">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="FJG-43-VSK" id="l98-8V-Ymw"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="bFk-51-JiZ">
+                                <button width="60" height="45" alignment="right" title="+" id="bFk-51-JiZ">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="FJG-43-VSK" id="3jN-7R-Ofr"/>
@@ -580,7 +593,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="fLt-cS-OGO">
+                        <group width="1" alignment="left" verticalAlignment="center" id="fLt-cS-OGO">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="All-rA-pQ5">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -597,7 +610,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="BuD-Br-wCG">
+                        <group width="1" alignment="left" verticalAlignment="center" id="BuD-Br-wCG">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="zg2-wb-f2g">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -613,7 +626,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="uCH-GG-aqw">
+                        <group width="1" alignment="left" verticalAlignment="center" id="uCH-GG-aqw">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="PtH-I5-oLb"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="nOK-YU-EeO"/>
@@ -638,15 +651,15 @@
             <objects>
                 <controller identifier="8" title="Hole 9" id="fuX-IL-QGL" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="Lu8-q3-hPe">
+                        <group width="1" alignment="left" verticalAlignment="center" id="Lu8-q3-hPe">
                             <items>
-                                <button width="60" alignment="left" title="+" id="NWl-Qj-gSo">
+                                <button width="60" height="45" alignment="left" title="+" id="NWl-Qj-gSo">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="fuX-IL-QGL" id="ysk-Dh-rJy"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="7jA-sz-q3T">
+                                <button width="60" height="45" alignment="right" title="+" id="7jA-sz-q3T">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="fuX-IL-QGL" id="6g2-Nc-ooP"/>
@@ -654,7 +667,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="XL2-S3-CcN">
+                        <group width="1" alignment="left" verticalAlignment="center" id="XL2-S3-CcN">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="sbu-w2-ao3">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -671,7 +684,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="CG6-Zv-Z7w">
+                        <group width="1" alignment="left" verticalAlignment="center" id="CG6-Zv-Z7w">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="W5b-QC-FDO">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -687,7 +700,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="agH-si-zvw">
+                        <group width="1" alignment="left" verticalAlignment="center" id="agH-si-zvw">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="GDB-Nm-5ZY"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="FR9-Sy-swG"/>
@@ -712,15 +725,15 @@
             <objects>
                 <controller identifier="9" title="Hole 10" id="wZL-JS-YG4" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="iHu-9b-aMZ">
+                        <group width="1" alignment="left" verticalAlignment="center" id="iHu-9b-aMZ">
                             <items>
-                                <button width="60" alignment="left" title="+" id="eQW-vZ-Ojp">
+                                <button width="60" height="45" alignment="left" title="+" id="eQW-vZ-Ojp">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="wZL-JS-YG4" id="nKN-Rg-9P7"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="5gz-od-AR5">
+                                <button width="60" height="45" alignment="right" title="+" id="5gz-od-AR5">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="wZL-JS-YG4" id="V76-8R-YRn"/>
@@ -728,7 +741,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="wAF-iQ-Wq5">
+                        <group width="1" alignment="left" verticalAlignment="center" id="wAF-iQ-Wq5">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="tCf-PF-ByK">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -745,7 +758,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="I1b-C2-qzn">
+                        <group width="1" alignment="left" verticalAlignment="center" id="I1b-C2-qzn">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="Edd-rt-zb5">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -761,7 +774,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="VmE-dq-WXn">
+                        <group width="1" alignment="left" verticalAlignment="center" id="VmE-dq-WXn">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="QP9-Gm-Cn1"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="61B-t6-mAU"/>
@@ -786,15 +799,15 @@
             <objects>
                 <controller identifier="10" title="Hole 11" id="JHc-br-nXK" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="AZX-xo-PSu">
+                        <group width="1" alignment="left" verticalAlignment="center" id="AZX-xo-PSu">
                             <items>
-                                <button width="60" alignment="left" title="+" id="poi-Ce-L9e">
+                                <button width="60" height="45" alignment="left" title="+" id="poi-Ce-L9e">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="JHc-br-nXK" id="bHh-dp-VzJ"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="Sef-aG-tZv">
+                                <button width="60" height="45" alignment="right" title="+" id="Sef-aG-tZv">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="JHc-br-nXK" id="yqN-Zt-akT"/>
@@ -802,7 +815,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="yyJ-UY-BJ3">
+                        <group width="1" alignment="left" verticalAlignment="center" id="yyJ-UY-BJ3">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="nIW-5s-yoZ">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -819,7 +832,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="DeC-VX-7Ow">
+                        <group width="1" alignment="left" verticalAlignment="center" id="DeC-VX-7Ow">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="7K6-Zl-1ew">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -835,7 +848,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="n5M-rk-0QD">
+                        <group width="1" alignment="left" verticalAlignment="center" id="n5M-rk-0QD">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="Hz9-jM-pz3"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="NZr-kO-qO4"/>
@@ -860,15 +873,15 @@
             <objects>
                 <controller identifier="11" title="Hole 12" id="D8L-u3-jq0" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="CxT-UW-1mD">
+                        <group width="1" alignment="left" verticalAlignment="center" id="CxT-UW-1mD">
                             <items>
-                                <button width="60" alignment="left" title="+" id="LTy-CE-29A">
+                                <button width="60" height="45" alignment="left" title="+" id="LTy-CE-29A">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="D8L-u3-jq0" id="jFZ-nU-AQo"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="zOf-aP-kpj">
+                                <button width="60" height="45" alignment="right" title="+" id="zOf-aP-kpj">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="D8L-u3-jq0" id="K1w-V8-6hB"/>
@@ -876,7 +889,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="tdL-HR-MMa">
+                        <group width="1" alignment="left" verticalAlignment="center" id="tdL-HR-MMa">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="MVf-HW-W7X">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -893,7 +906,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="0Ny-9X-M1Z">
+                        <group width="1" alignment="left" verticalAlignment="center" id="0Ny-9X-M1Z">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="VG4-gR-4e8">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -909,7 +922,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="S2h-Ag-1Rd">
+                        <group width="1" alignment="left" verticalAlignment="center" id="S2h-Ag-1Rd">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="u48-bc-0kA"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="LN0-QT-67A"/>
@@ -934,15 +947,15 @@
             <objects>
                 <controller identifier="12" title="Hole 13" id="Yja-0r-cdR" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="wde-Gh-Vgx">
+                        <group width="1" alignment="left" verticalAlignment="center" id="wde-Gh-Vgx">
                             <items>
-                                <button width="60" alignment="left" title="+" id="5eC-le-mfq">
+                                <button width="60" height="45" alignment="left" title="+" id="5eC-le-mfq">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="Yja-0r-cdR" id="JIK-K4-Zkr"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="7MN-mK-q2T">
+                                <button width="60" height="45" alignment="right" title="+" id="7MN-mK-q2T">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="Yja-0r-cdR" id="Xbe-4k-eIg"/>
@@ -950,7 +963,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="NOg-0a-Xmr">
+                        <group width="1" alignment="left" verticalAlignment="center" id="NOg-0a-Xmr">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="Sh0-CV-sX6">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -967,7 +980,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="OgQ-Gl-PRv">
+                        <group width="1" alignment="left" verticalAlignment="center" id="OgQ-Gl-PRv">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="A9x-D3-pYz">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -983,7 +996,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="KTd-K7-he0">
+                        <group width="1" alignment="left" verticalAlignment="center" id="KTd-K7-he0">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="R8l-Se-u0a"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="jud-ed-SNF"/>
@@ -1008,15 +1021,15 @@
             <objects>
                 <controller identifier="13" title="Hole 14" id="cWN-K5-b0C" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="xXw-B9-ZsB">
+                        <group width="1" alignment="left" verticalAlignment="center" id="xXw-B9-ZsB">
                             <items>
-                                <button width="60" alignment="left" title="+" id="u5f-gw-nK1">
+                                <button width="60" height="45" alignment="left" title="+" id="u5f-gw-nK1">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="cWN-K5-b0C" id="L0k-0j-5hf"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="xSy-pc-tBG">
+                                <button width="60" height="45" alignment="right" title="+" id="xSy-pc-tBG">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="cWN-K5-b0C" id="c8D-hi-3ta"/>
@@ -1024,7 +1037,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="qvx-fB-Q3R">
+                        <group width="1" alignment="left" verticalAlignment="center" id="qvx-fB-Q3R">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="X7P-NP-0k2">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -1041,7 +1054,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="YoL-a0-WRX">
+                        <group width="1" alignment="left" verticalAlignment="center" id="YoL-a0-WRX">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="zK9-RV-DNq">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1057,7 +1070,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="cOD-bQ-qJe">
+                        <group width="1" alignment="left" verticalAlignment="center" id="cOD-bQ-qJe">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="EfF-uz-Y9i"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="vFw-QG-3EN"/>
@@ -1082,15 +1095,15 @@
             <objects>
                 <controller identifier="14" title="Hole 15" id="3Jg-qA-7bg" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="AkM-wr-Juv">
+                        <group width="1" alignment="left" verticalAlignment="center" id="AkM-wr-Juv">
                             <items>
-                                <button width="60" alignment="left" title="+" id="Xdt-Y8-JGO">
+                                <button width="60" height="45" alignment="left" title="+" id="Xdt-Y8-JGO">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="3Jg-qA-7bg" id="5z7-KA-Ftu"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="3LS-jn-ZmI">
+                                <button width="60" height="45" alignment="right" title="+" id="3LS-jn-ZmI">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="3Jg-qA-7bg" id="76N-xs-0Zo"/>
@@ -1098,7 +1111,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="2tY-VB-W4j">
+                        <group width="1" alignment="left" verticalAlignment="center" id="2tY-VB-W4j">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="HG8-AK-mO5">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -1115,7 +1128,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="Joe-CZ-epD">
+                        <group width="1" alignment="left" verticalAlignment="center" id="Joe-CZ-epD">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="4FX-rh-qn5">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1131,7 +1144,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="4Qm-vi-Tra">
+                        <group width="1" alignment="left" verticalAlignment="center" id="4Qm-vi-Tra">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="yyB-8d-UTP"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="Y45-Hp-9xg"/>
@@ -1156,15 +1169,15 @@
             <objects>
                 <controller identifier="15" title="Hole 16" id="QeL-rq-vom" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="GyG-xL-lK4">
+                        <group width="1" alignment="left" verticalAlignment="center" id="GyG-xL-lK4">
                             <items>
-                                <button width="60" alignment="left" title="+" id="m8k-9Z-W69">
+                                <button width="60" height="45" alignment="left" title="+" id="m8k-9Z-W69">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="QeL-rq-vom" id="lZy-oT-rum"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="MCk-Qb-0qG">
+                                <button width="60" height="45" alignment="right" title="+" id="MCk-Qb-0qG">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="QeL-rq-vom" id="aA2-KF-Xnp"/>
@@ -1172,7 +1185,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="X2r-S5-1Af">
+                        <group width="1" alignment="left" verticalAlignment="center" id="X2r-S5-1Af">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="vvX-8O-4Gv">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -1189,7 +1202,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="phv-6B-41O">
+                        <group width="1" alignment="left" verticalAlignment="center" id="phv-6B-41O">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="dWm-kK-DQc">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1205,7 +1218,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="uOf-wU-Z3s">
+                        <group width="1" alignment="left" verticalAlignment="center" id="uOf-wU-Z3s">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="sO2-f2-EnZ"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="5kS-XX-BKZ"/>
@@ -1230,15 +1243,15 @@
             <objects>
                 <controller identifier="16" title="Hole 17" id="sNf-s9-m1A" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="ySz-1u-Wsu">
+                        <group width="1" alignment="left" verticalAlignment="center" id="ySz-1u-Wsu">
                             <items>
-                                <button width="60" alignment="left" title="+" id="b1Q-MY-xPZ">
+                                <button width="60" height="45" alignment="left" title="+" id="b1Q-MY-xPZ">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="sNf-s9-m1A" id="Cky-OJ-pHh"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="WG3-lJ-SWw">
+                                <button width="60" height="45" alignment="right" title="+" id="WG3-lJ-SWw">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="sNf-s9-m1A" id="6fJ-FA-gW5"/>
@@ -1246,7 +1259,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="X8Q-zG-4Mi">
+                        <group width="1" alignment="left" verticalAlignment="center" id="X8Q-zG-4Mi">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="gYO-nf-s6x">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -1263,7 +1276,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="1go-JL-GRG">
+                        <group width="1" alignment="left" verticalAlignment="center" id="1go-JL-GRG">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="1zX-1L-Hgt">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1279,7 +1292,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="sp7-pF-oON">
+                        <group width="1" alignment="left" verticalAlignment="center" id="sp7-pF-oON">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="ti0-pc-dNL"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="xqR-Qf-mWK"/>
@@ -1304,15 +1317,15 @@
             <objects>
                 <controller identifier="17" title="Hole 18" id="56i-fJ-aY9" customClass="HoleOneInterfaceController" customModule="dyskalkulie_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" id="1HF-of-j4z">
+                        <group width="1" alignment="left" verticalAlignment="center" id="1HF-of-j4z">
                             <items>
-                                <button width="60" alignment="left" title="+" id="uwQ-ps-UHU">
+                                <button width="60" height="45" alignment="left" title="+" id="uwQ-ps-UHU">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerOneCnt" destination="56i-fJ-aY9" id="0YH-nc-86t"/>
                                     </connections>
                                 </button>
-                                <button width="60" alignment="right" title="+" id="zN7-6l-CpC">
+                                <button width="60" height="45" alignment="right" title="+" id="zN7-6l-CpC">
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <connections>
                                         <action selector="incrPlayerTwoCnt" destination="56i-fJ-aY9" id="jw3-ul-uF1"/>
@@ -1320,7 +1333,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="iMT-Fi-gVR">
+                        <group width="1" alignment="left" verticalAlignment="center" id="iMT-Fi-gVR">
                             <items>
                                 <label width="60" alignment="left" text="0" textAlignment="center" id="fHF-ow-2ZI">
                                     <fontDescription key="font" type="boldSystem" pointSize="25"/>
@@ -1337,7 +1350,7 @@
                                 </longPressGestureRecognizer>
                             </gestureRecognizers>
                         </group>
-                        <group width="1" alignment="left" id="xNz-EV-Mve">
+                        <group width="1" alignment="left" verticalAlignment="center" id="xNz-EV-Mve">
                             <items>
                                 <button width="60" height="30" alignment="left" title="-" id="v1u-7f-n2l">
                                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1353,7 +1366,7 @@
                                 </button>
                             </items>
                         </group>
-                        <group width="1" alignment="left" id="lmH-La-rcE">
+                        <group width="1" alignment="left" verticalAlignment="center" id="lmH-La-rcE">
                             <items>
                                 <label width="60" alignment="left" text="P1" textAlignment="center" id="sfg-YE-L8R"/>
                                 <label width="60" alignment="right" text="P2" textAlignment="center" id="bOA-h0-paw"/>

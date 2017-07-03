@@ -25,7 +25,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
         if(WCSession.isSupported()){
@@ -60,7 +59,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     @IBAction func resetRound() {
-        model.resetRound()
-        WKInterfaceDevice.current().play(.click)
+        
+        let acceptResetHandler = {
+            self.model.resetRound()
+            WKInterfaceDevice.current().play(.click)
+        }
+        let action1 = WKAlertAction(title: "Reset", style: .destructive, handler: acceptResetHandler)
+        let action3 = WKAlertAction(title: "Cancel", style: .cancel) {}
+            
+        presentAlert(withTitle: "Sure?", message: "", preferredStyle: .actionSheet, actions: [action1,action3])
     }
 }
