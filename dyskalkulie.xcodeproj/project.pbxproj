@@ -25,6 +25,7 @@
 		BC1A3EBA1F07BB86008906A2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A3EB91F07BB86008906A2 /* WatchConnectivity.framework */; };
 		BC1A3EBC1F07BB99008906A2 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1A3EBB1F07BB99008906A2 /* WatchConnectivity.framework */; };
 		BC1A3EBE1F080D7E008906A2 /* ConnectivityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */; };
+		BCA6FF431F0D03EE00487BEB /* ScorecardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA6FF421F0D03EE00487BEB /* ScorecardTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		BC1A3EB91F07BB86008906A2 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.2.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 		BC1A3EBB1F07BB99008906A2 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectivityHandler.swift; sourceTree = "<group>"; };
+		BCA6FF421F0D03EE00487BEB /* ScorecardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScorecardTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				BC1A3E741F041771008906A2 /* LaunchScreen.storyboard */,
 				BC1A3E771F041771008906A2 /* Info.plist */,
 				BC1A3EBD1F080D7E008906A2 /* ConnectivityHandler.swift */,
+				BCA6FF421F0D03EE00487BEB /* ScorecardTableViewController.swift */,
 			);
 			path = dyskalkulie;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			files = (
 				BC1A3E6E1F041771008906A2 /* ViewController.swift in Sources */,
 				BC1A3EBE1F080D7E008906A2 /* ConnectivityHandler.swift in Sources */,
+				BCA6FF431F0D03EE00487BEB /* ScorecardTableViewController.swift in Sources */,
 				BC1A3E6C1F041771008906A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
