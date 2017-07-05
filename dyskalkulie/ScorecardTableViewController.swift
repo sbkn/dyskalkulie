@@ -62,7 +62,7 @@ class ScorecardTableViewController: UITableViewController {
 
         let holeNumber = indexPath.row + 1 + indexPath.section * 9
         
-        cell.textLabel?.text = "Hole \(holeNumber)|\t\(scoreData[holeNumber - 1])\t|\t\(scoreData[holeNumber - 1 + 18])"
+        cell.textLabel?.text = "Hole \(holeNumber)\t|\t\(scoreData[holeNumber - 1])\t|\t\(scoreData[holeNumber - 1 + 18])"
 
         return cell
     }
