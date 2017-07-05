@@ -20,7 +20,7 @@ class HoleOneInterfaceController: WKInterfaceController {
     @IBOutlet var incrPlayerTwoBtn: WKInterfaceButton!
     @IBOutlet var decrPlayerTwoBtn: WKInterfaceButton!
     
-    var holeIndex : Int?
+    var holeIndex : Int? = 0
     var buttonsAreLocked : Bool = false
     var model: CounterModel?
     
@@ -29,11 +29,9 @@ class HoleOneInterfaceController: WKInterfaceController {
         
         if let val = context as? [String: Any] {
             model = val["model"] as? CounterModel
-            holeIndex = val["index"] as? Int
         }
         
-        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex!).description)
-        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex!).description)
+        updateLabels()
     }
     
     override func willActivate() {
@@ -90,5 +88,26 @@ class HoleOneInterfaceController: WKInterfaceController {
         model?.decrementStrokesPlayerTwo(hole: holeIndex!)
         labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex!).description)
         WKInterfaceDevice.current().play(.click)
+    }
+    
+    @IBAction func handleSwipeLeft(_ sender: Any) {
+        if holeIndex! < 17 {
+            holeIndex! += 1
+            self.setTitle("Hole \(holeIndex! + 1)")
+            updateLabels()
+        }
+    }
+    
+    @IBAction func handleSwipeRight(_ sender: Any) {
+        if holeIndex! > 0 {
+            holeIndex! -= 1
+            self.setTitle("Hole \(holeIndex! + 1)")
+            updateLabels()
+        }
+    }
+    
+    func updateLabels() {
+        labelPOneCnt.setText(model?.getStrokesPlayerOne(hole: holeIndex!).description)
+        labelPTwoCnt.setText(model?.getStrokesPlayerTwo(hole: holeIndex!).description)
     }
 }

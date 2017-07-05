@@ -39,13 +39,8 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
-    override func contextsForSegue(withIdentifier segueIdentifier: String) -> [Any]? {
-        
-        var modelArr = [["model": model, "index": 0]]
-        for index in 1...17 {
-            modelArr.append(["model": model, "index": index])
-        }
-        return modelArr
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        return ["model": model]
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
